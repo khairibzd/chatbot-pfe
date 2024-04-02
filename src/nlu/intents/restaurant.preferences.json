@@ -1,0 +1,16 @@
+{
+  "questions": [
+    "I prefer {{ preference }}",
+    "I require {{ preference }}",
+    "I would like {{ preference }}",
+
+    "I want to travel",
+
+    "I prefer {{ cuisine }} cuisine",
+    "I like {{ ambiance }} ambiance",
+    "I would prefer a restaurant located in {{ location }}",
+    "i want it located {{ location }}",
+    "i want to try {{ cuisine }}",
+    "I like"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "questions": [
+    "My name is {{user_name}}",
+    "I'm {{user_name}}",
+    "You can call me {{user_name}}"
+  ]
+}

@@ -1,0 +1,210 @@
+[
+    {
+      "intent": "greeting",
+      "utterances": [
+        "Hi there!",
+        "Hello!",
+        "Hey!",
+        "Good morning!",
+        "Good afternoon!",
+        "Hey, how are you?",
+        "Hi, what's up?"
+      ],
+      "responses": [
+        "Hello! Welcome to our restaurant recommendation service. How can I assist you today?",
+        "Hi there! Looking for some great dining options? I'm here to help!",
+        "Hey! Ready to explore some fantastic restaurants?"
+      ]
+    },
+    {
+      "intent": "goodbye",
+      "utterances": [
+        "Goodbye!",
+        "See you later!",
+        "Bye!",
+        "Take care!",
+        "Have a great day!",
+        "Until next time!"
+      ],
+      "responses": [
+        "Goodbye! Have a wonderful day!",
+        "See you later! Enjoy your meal!",
+        "Until next time! Take care!"
+      ]
+    },
+    {
+      "intent": "thanks",
+      "utterances": [
+        "Thank you!",
+        "Thanks a lot!",
+        "Thanks!",
+        "Appreciate it!",
+        "Thank you so much!"
+      ],
+      "responses": [
+        "You're welcome! If you need any more assistance, feel free to ask.",
+        "Glad I could help! Enjoy your dining experience!",
+        "No problem! Let me know if there's anything else I can assist you with."
+      ]
+    },
+    {
+      "intent": "recommend_restaurant",
+      "utterances": [
+        "Can you recommend a restaurant?",
+        "I'm looking for a good place to eat.",
+        "Where should I go for dinner?",
+        "Any suggestions for a nice restaurant?",
+        "What's a popular spot for dining?",
+        "I need a recommendation for a restaurant."
+      ],
+      "responses": [
+        "Sure! What type of cuisine are you interested in?",
+        "Of course! Could you tell me your preferences? Like cuisine type or location?",
+        "Absolutely! Let's find you the perfect spot. Any specific requirements?"
+      ]
+    },
+    {
+      "intent": "get_location",
+      "utterances": [
+        "Where is it located?",
+        "What's the address?",
+        "Can you tell me where it's situated?",
+        "Where can I find it?",
+        "What's the location?",
+        "I need directions."
+      ],
+      "responses": [
+        "The restaurant is located at [address].",
+        "You can find it at [address].",
+        "It's situated at [address]."
+      ]
+    },
+    {
+      "intent": "menu",
+      "utterances": [
+        "What's on the menu?",
+        "Can I see the menu?",
+        "What kind of food do they serve?",
+        "Do they have vegetarian options?",
+        "Can you tell me about their dishes?",
+        "Is there a menu available?"
+      ],
+      "responses": [
+        "Here's a link to their menu: [menu_link]",
+        "They offer a variety of dishes including [popular_dishes].",
+        "Their menu features options such as [popular_dishes]."
+      ]
+    },
+    {
+      "intent": "price",
+      "utterances": [
+        "How much does it cost?",
+        "What are the prices like?",
+        "Is it expensive?",
+        "What's the price range?",
+        "Can you give me an idea of the prices?",
+        "Do they have any specials or deals?"
+      ],
+      "responses": [
+        "The price range is typically [price_range].",
+        "It's moderately priced, with dishes ranging from [min_price] to [max_price].",
+        "You can expect to spend around [average_price] per person."
+      ]
+    },
+    {
+      "intent": "hours",
+      "utterances": [
+        "When are they open?",
+        "What are their hours of operation?",
+        "Are they open late?",
+        "What time do they close?",
+        "When can I visit?",
+        "What are their business hours?"
+      ],
+      "responses": [
+        "They are open from [opening_time] to [closing_time] every day.",
+        "Their business hours are [hours].",
+        "They usually close around [closing_time]."
+      ]
+    },
+    {
+      "intent": "reservation",
+      "utterances": [
+        "Do I need a reservation?",
+        "Can I make a reservation?",
+        "Is it necessary to book in advance?",
+        "How do I reserve a table?",
+        "Are reservations recommended?",
+        "Can you book a table for me?"
+      ],
+      "responses": [
+        "Reservations are recommended, especially during peak hours.",
+        "You can make a reservation by calling [phone_number].",
+        "It's advisable to book a table in advance to ensure availability."
+      ]
+    },
+    {
+      "intent": "contact",
+      "utterances": [
+        "How can I contact them?",
+        "What's their phone number?",
+        "Do they have an email?",
+        "Can I call them?",
+        "Is there a way to get in touch?",
+        "I need to reach them."
+      ],
+      "responses": [
+        "You can contact them at [phone_number].",
+        "Their phone number is [phone_number].",
+        "For inquiries, you can reach them at [phone_number] or [email]."
+      ]
+    },
+    {
+      "intent": "thanks",
+      "utterances": [
+        "Thank you!",
+        "Thanks a lot!",
+        "Thanks!",
+        "Appreciate it!",
+        "Thank you so much!"
+      ],
+      "responses": [
+        "You're welcome! If you need any more assistance, feel free to ask.",
+        "Glad I could help! Enjoy your dining experience!",
+        "No problem! Let me know if there's anything else I can assist you with."
+      ]
+    },
+    {
+      "intent": "affirmative",
+      "utterances": [
+        "Yes",
+        "Sure",
+        "Absolutely",
+        "Of course",
+        "Definitely",
+        "Yeah"
+      ],
+      "responses": [
+        "Great! Let me know if you need any further assistance.",
+        "Awesome! Is there anything else I can help you with?",
+        "Perfect! Feel free to ask if you have any other questions."
+      ]
+    },
+    {
+      "intent": "negative",
+      "utterances": [
+        "No",
+        "Not really",
+        "I don't think so",
+        "I'm not sure",
+        "Not really my thing",
+        "Nah"
+      ],
+      "responses": [
+        "No problem! If you change your mind, I'm here to help.",
+        "That's okay. If you have any other preferences, feel free to let me know.",
+        "Alright, just let me know if you need anything else."
+      ]
+    }
+  ]
+  

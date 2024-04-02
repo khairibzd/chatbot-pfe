@@ -1,0 +1,264 @@
+{
+  "settings": {
+    "tag": "nlp",
+    "forceNER": true,
+    "languages": [
+      "en"
+    ],
+    "corpora": [
+      "./src/nlu/corpora/gather-name.json"
+    ],
+    "calculateSentiment": true,
+    "executeActionsBeforeAnswers": false
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "@user_nam,is,my,name": {
+            "intent": "user.name",
+            "domain": "default"
+          },
+          "@user_nam,am,i": {
+            "intent": "user.name",
+            "domain": "default"
+          },
+          "@user_nam,call,can,me,you": {
+            "intent": "user.name",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "user.name": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "My name is @user_name",
+            "intent": "user.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "I'm @user_name",
+            "intent": "user.name"
+          },
+          {
+            "domain": "default",
+            "utterance": "You can call me @user_name",
+            "intent": "user.name"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "my": 1,
+              "name": 1,
+              "is": 1,
+              "@user_nam": 1,
+              "i": 1,
+              "am": 1,
+              "you": 1,
+              "can": 1,
+              "call": 1,
+              "me": 1
+            },
+            "intents": {
+              "user.name": 1
+            },
+            "intentFeatures": {
+              "user.name": {
+                "my": 1,
+                "name": 1,
+                "is": 1,
+                "@user_nam": 1,
+                "i": 1,
+                "am": 1,
+                "you": 1,
+                "can": 1,
+                "call": 1,
+                "me": 1
+              }
+            },
+            "featuresToIntent": {
+              "my": [
+                "user.name"
+              ],
+              "name": [
+                "user.name"
+              ],
+              "is": [
+                "user.name"
+              ],
+              "@user_nam": [
+                "user.name"
+              ],
+              "i": [
+                "user.name"
+              ],
+              "am": [
+                "user.name"
+              ],
+              "you": [
+                "user.name"
+              ],
+              "can": [
+                "user.name"
+              ],
+              "call": [
+                "user.name"
+              ],
+              "me": [
+                "user.name"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "my",
+                "name",
+                "is",
+                "@user_nam",
+                "i",
+                "am",
+                "you",
+                "can",
+                "call",
+                "me"
+              ],
+              "intents": [
+                "user.name"
+              ],
+              "perceptrons": [
+                [
+                  1.8425147533416748,
+                  1.8425147533416748,
+                  1.8425147533416748,
+                  5.882500648498535,
+                  2.690601110458374,
+                  2.690601110458374,
+                  1.3491253852844238,
+                  1.3491253852844238,
+                  1.3491253852844238,
+                  1.3491253852844238,
+                  2.9432756540180436
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "My name is @user_name"
+      ],
+      [
+        "en",
+        "I'm @user_name"
+      ],
+      [
+        "en",
+        "You can call me @user_name"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner"
+    },
+    "rules": {
+      "en": {
+        "user_name": {
+          "name": "user_name",
+          "type": "trim",
+          "rules": [
+            {
+              "type": "afterLast",
+              "words": [
+                "is",
+                "name",
+                "I'm"
+              ],
+              "options": {}
+            }
+          ]
+        }
+      }
+    }
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "user.name": [
+          {
+            "answer": "Nice to meet you, {{ user_name }}!"
+          },
+          {
+            "answer": "Hi {{ user_name }}! How can I help you?"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {
+    "user.name": {
+      "user_name": {
+        "intent": "user.name",
+        "entity": "user_name",
+        "mandatory": true,
+        "locales": {}
+      }
+    }
+  }
+}
